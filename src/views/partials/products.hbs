@@ -1,0 +1,35 @@
+<main class="row p-3">
+    {{#each products}}
+        {{#if id}}
+        <div class="col-md-3">            
+            <article class="card w-100">
+                <a class="stretched-link" href="{{id}}" >
+                    <img src="{{image}}" class="card-img-top" alt="{{name}}" />
+                    <div class="card-body">
+                        <!-- BREADCRUMB Category -->
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">{{ category }}</a></li>
+                            </ol>
+                        </nav>
+
+                        <h5 class="card-title">{{name}}</h5>
+
+                        <!-- BREADCRUMB Collections -->
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                {{#each collection}}
+                                <li class="breadcrumb-item"><a href="#">{{name}} </a></li>
+                                {{/each}}
+                            </ol>
+                        </nav>
+                        <p class="card-text">{{description}}</p>
+                    </div>
+                </a>
+            </article>
+        </div>
+        {{else }}
+            <p>No dishes</p>
+        {{/if }}
+    {{/each}}
+</main>

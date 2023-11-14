@@ -1,0 +1,25 @@
+<div class="modal fade" tabindex="-1" id="welcomeModal" role="dialog">
+    <div class="modal-dialog modal-fullscreen-sm-down">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-4">Bienvenido a Titbit</h1>
+                <button class="btn-close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Presione el botón para descargar el pdf por favor</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary">Menú Digital</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    document.onreadystatechange = () => {
+        const myModal = new bootstrap.Modal( document.getElementById('welcomeModal'),{});
+        //myModal.show();
+    }
+
+</script>

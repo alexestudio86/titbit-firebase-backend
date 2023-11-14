@@ -1,0 +1,18 @@
+<div class="py-2">
+    <div class="overflow-hidden py-2 bg-light">
+
+        <!-- CATEGORIES -->
+        {{#if categories }}
+            {{#each categories}}
+                <!-- Show Desayunos y Almuerzos -->
+                {{#each items}}
+                <!-- Alitas, bebidas... -->
+                    <button type="button" class="btn btn-secondary">{{ name }}</button>
+                {{/each}}
+            {{/each}}
+        {{else }}
+            <p>Sin Categorías</p>
+        {{/if }}
+
+    </div>            
+</div>
